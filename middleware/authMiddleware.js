@@ -30,7 +30,7 @@ const protectRoutes = asyncHandler( async ( req, res, next ) => {
         next()
     } catch (error) {
         res.status( 401 )
-        throw new Error( 'Unauthorized, please login and try again' )
+        throw new Error( error )
        
     }
 } );
