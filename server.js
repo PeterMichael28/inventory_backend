@@ -27,10 +27,11 @@ app.use( express.json() ); //to handle our json
 app.use( cookieParser() ); // cookie parser
 app.use( express.urlencoded( { extended: false } )); //handle data via url
 app.use( bodyParser.json() ); // to parse the data sent in the body from the frontend
-app.use( cors({
-    origin: ["http://localhost:3000", 'https://inventoryapp-eight.vercel.app/'],
-    credentials: true,
-  }) ); // cors
+app.use( cors() ); // cors
+// cors({
+//     origin: ["http://localhost:3000", 'https://inventoryapp-eight.vercel.app/'],
+//     credentials: true,
+//   })
 
 //setting the upload routes
 app.use('/uploads', express.static(path.join(__dirname, "uploads")))
