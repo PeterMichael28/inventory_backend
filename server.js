@@ -27,7 +27,7 @@ app.use( express.json() ); //to handle our json
 app.use( cookieParser() ); // cookie parser
 app.use( express.urlencoded( { extended: false } )); //handle data via url
 app.use( bodyParser.json() ); // to parse the data sent in the body from the frontend
-app.use( cors() ); // cors
+app.use( cors(corsOptions) ); // cors
 // cors({
 //     origin: ["http://localhost:3000", 'https://inventoryapp-eight.vercel.app/'],
 //     credentials: true,
